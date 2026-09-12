@@ -5,93 +5,90 @@
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>AIPM·瞭望台 | AI 竞品分析作品集</title>
 <style>
-  :root{--bg:#FFFDF7;--ink:#2B2B2B;--sub:#7A7367;--accent:#E8A33D;--accent2:#C9742B;--line:#EFE7D6;--card:#FFFFFF;}
+  :root{
+    --bg:#FFF9F0;--card:#FFFFFF;--ink:#2E2E38;--muted:#8A7D6B;
+    --line:#F3E6D0;--brand:#F59E0B;--brand-light:#FCD34D;--brand-ghost:#FFF3D9;--brand-deep:#C9742B;
+  }
   *{box-sizing:border-box;margin:0;padding:0}
-  body{font-family:-apple-system,BlinkMacSystemFont,"PingFang SC","Microsoft YaHei",sans-serif;background:var(--bg);color:var(--ink);line-height:1.6;padding:48px 20px 64px}
-  .wrap{max-width:980px;margin:0 auto}
-  header{text-align:center;margin-bottom:14px}
-  .badge{display:inline-block;background:var(--accent);color:#fff;font-size:13px;font-weight:600;padding:5px 14px;border-radius:999px;letter-spacing:1px}
-  h1{font-size:34px;margin:18px 0 8px;letter-spacing:1px}
-  .lead{color:var(--sub);font-size:15px;max-width:640px;margin:0 auto}
-  .stats{display:flex;justify-content:center;gap:28px;margin:26px 0 36px;flex-wrap:wrap}
-  .stat{text-align:center}
-  .stat b{display:block;font-size:26px;color:var(--accent2)}
-  .stat span{font-size:13px;color:var(--sub)}
-  .grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(280px,1fr));gap:18px}
-  .card{display:block;background:var(--card);border:1px solid var(--line);border-radius:14px;padding:22px 22px 20px;text-decoration:none;color:inherit;transition:.18s;box-shadow:0 2px 8px rgba(0,0,0,.04)}
-  .card:hover{transform:translateY(-3px);border-color:var(--accent);box-shadow:0 8px 22px rgba(201,116,43,.14)}
-  .card-title{font-size:17px;font-weight:700;margin-bottom:10px}
-  .card-meta{font-size:13px;color:var(--accent2)}
-  footer{text-align:center;color:var(--sub);font-size:13px;margin-top:44px}
+  body{font-family:-apple-system,BlinkMacSystemFont,"Segoe UI","PingFang SC","Microsoft YaHei",sans-serif;background:var(--bg);color:var(--ink);line-height:1.7;}
+  .topbar{display:flex;align-items:baseline;gap:14px;padding:20px 40px;border-bottom:1px solid var(--line);flex-wrap:wrap}
+  .brand{font-size:20px;font-weight:700;color:var(--ink);letter-spacing:1px}
+  .brand span{font-weight:400;color:var(--brand)}
+  .brand-sub{font-size:13px;color:var(--muted)}
+  .hero{max-width:860px;margin:56px auto 0;padding:0 24px;text-align:center}
+  .hero h1{font-size:30px;font-weight:700;line-height:1.3;margin:0 0 16px}
+  .lead{font-size:15px;color:var(--muted);margin:0 auto 28px;max-width:680px}
+  .search{display:flex;gap:10px;max-width:640px;margin:0 auto}
+  #goal-input{flex:1;padding:14px 18px;border:1px solid var(--line);border-radius:14px;font-size:14px;background:#fff;outline:none;color:var(--ink)}
+  #goal-input:focus{border-color:var(--brand);box-shadow:0 0 0 3px var(--brand-ghost)}
+  .search button{padding:14px 24px;border:none;border-radius:14px;background:var(--brand);color:#fff;font-size:14px;font-weight:600;cursor:pointer;transition:.15s;white-space:nowrap}
+  .search button:hover{background:#E08C08}
+  .status{margin-top:14px;font-size:13px;color:var(--muted);min-height:20px}
+  .demo-note{display:inline-block;margin-top:18px;font-size:12.5px;color:var(--brand-deep);background:var(--brand-ghost);border:1px solid var(--line);padding:6px 14px;border-radius:999px}
+  .panel{max-width:980px;margin:54px auto 0;padding:0 24px}
+  .panel-head{display:flex;align-items:baseline;justify-content:space-between;gap:12px;margin:0 0 18px;flex-wrap:wrap}
+  .panel-head h2{font-size:20px;margin:0}
+  .panel-head .count{font-size:13px;color:var(--muted)}
+  .cards{display:grid;grid-template-columns:repeat(auto-fill,minmax(280px,1fr));gap:16px}
+  .card{display:block;background:var(--card);border:1px solid var(--line);border-radius:16px;padding:20px 22px;transition:.15s;text-decoration:none;color:var(--ink)}
+  .card:hover{border-color:var(--brand);box-shadow:0 6px 20px rgba(245,158,11,.14);transform:translateY(-2px)}
+  .card h3{margin:0 0 8px;font-size:16px;font-weight:700}
+  .card .meta{font-size:12.5px;color:var(--brand-deep)}
+  footer{text-align:center;color:var(--muted);font-size:13px;margin:48px 0 40px;padding:0 24px}
+  @media(max-width:640px){.topbar{padding:16px 20px}.search{flex-direction:column}}
 </style>
 </head>
 <body>
-<div class="wrap">
-  <header>
-    <span class="badge">AIPM · 瞭望台</span>
-    <h1>AI 竞品分析作品集</h1>
-    <p class="lead">面向 AI 产品经理的竞品情报分析系统「AI情报局」产出报告合集。每份报告含市场定位、能力雷达、功能矩阵、商业模式、增长路径、用户口碑与竞争格局，全部可视化呈现。</p>
-  </header>
-  <div class="stats">
-    <div class="stat"><b>13</b><span>份竞品报告</span></div>
-    <div class="stat"><b>7</b><span>分析维度</span></div>
-    <div class="stat"><b>ECharts</b><span>本地渲染·无外链</span></div>
+<header class="topbar">
+  <div class="brand">AIPM<span>·瞭望台</span></div>
+  <div class="brand-sub">AI 竞品研究与报告生成系统</div>
+</header>
+
+<section class="hero">
+  <h1>把数小时调研，压缩成一份带证据的报告</h1>
+  <p class="lead">输入一个研究目标（产品分析 / 竞品对比 / 市场扫描 / 产品选型 / 机会探索），实时联网检索，产出结构化、可视化、可溯源的研究报告。</p>
+  <form id="goal-form" class="search">
+    <input id="goal-input" placeholder="例如：分析一下 Cursor，或对比 Cursor 与 Dify" autocomplete="off">
+    <button type="submit">生成报告</button>
+  </form>
+  <p id="status" class="status"></p>
+  <div class="demo-note">演示版 · 下方为已生成的竞品分析报告作品集</div>
+</section>
+
+<section class="panel" id="portfolio">
+  <div class="panel-head">
+    <h2>作品集 · 历史报告</h2>
+    <span class="count">13 份可视化竞品报告 · 7 分析维度 · ECharts 本地渲染无外链</span>
   </div>
-  <div class="grid">
-      <a class="card" href="./Cursor_Dify_竞品对比.html">
-        <div class="card-title">Cursor vs Dify 竞品对比</div>
-        <div class="card-meta">点击查看完整可视化竞品报告 →</div>
-      </a>
-      <a class="card" href="./Cursor_竞品分析.html">
-        <div class="card-title">Cursor AI 竞品分析</div>
-        <div class="card-meta">点击查看完整可视化竞品报告 →</div>
-      </a>
-      <a class="card" href="./claude_code_分析他的竞品_20260825072421.html">
-        <div class="card-title">Claude Code 竞品分析报告</div>
-        <div class="card-meta">点击查看完整可视化竞品报告 →</div>
-      </a>
-      <a class="card" href="./midjourney_20260825081211.html">
-        <div class="card-title">Midjourney 产品深度分析报告</div>
-        <div class="card-meta">点击查看完整可视化竞品报告 →</div>
-      </a>
-      <a class="card" href="./sample_report.html">
-        <div class="card-title">可灵 AI 竞品分析（样例）</div>
-        <div class="card-meta">点击查看完整可视化竞品报告 →</div>
-      </a>
-      <a class="card" href="./分析_Cursor_20260824203354.html">
-        <div class="card-title">Cursor 产品分析报告</div>
-        <div class="card-meta">点击查看完整可视化竞品报告 →</div>
-      </a>
-      <a class="card" href="./分析_vs_code_20260827171700.html">
-        <div class="card-title">VS Code 竞品分析报告：代码编辑器市场的统治与挑战</div>
-        <div class="card-meta">点击查看完整可视化竞品报告 →</div>
-      </a>
-      <a class="card" href="./分析一下_Cursor_这款_AI_编程工具_20260826005227.html">
-        <div class="card-title">Cursor 产品分析报告</div>
-        <div class="card-meta">点击查看完整可视化竞品报告 →</div>
-      </a>
-      <a class="card" href="./分析一下_Notion_AI_这款产品_20260826005415.html">
-        <div class="card-title">Notion AI 产品分析报告</div>
-        <div class="card-meta">点击查看完整可视化竞品报告 →</div>
-      </a>
-      <a class="card" href="./可灵_竞品分析.html">
-        <div class="card-title">可灵 AI 竞品分析</div>
-        <div class="card-meta">点击查看完整可视化竞品报告 →</div>
-      </a>
-      <a class="card" href="./对比_codex_与_cursor_20260824231230.html">
-        <div class="card-title">Codex vs Cursor：AI 编程助手竞品对比研究报告</div>
-        <div class="card-meta">点击查看完整可视化竞品报告 →</div>
-      </a>
-      <a class="card" href="./对比codex_20260824230846.html">
-        <div class="card-title">Codex 竞品对比研究报告</div>
-        <div class="card-meta">点击查看完整可视化竞品报告 →</div>
-      </a>
-      <a class="card" href="./对比即梦和小云雀_20260824233928.html">
-        <div class="card-title">即梦 vs 小云雀：字节系AI创作平台竞品对比研究报告</div>
-        <div class="card-meta">点击查看完整可视化竞品报告 →</div>
-      </a>
+  <div class="cards">
+      <a class="card" href="./Cursor_Dify_竞品对比.html"><h3>Cursor vs Dify 竞品对比</h3><div class="meta">点击查看完整可视化竞品报告 →</div></a>
+      <a class="card" href="./Cursor_竞品分析.html"><h3>Cursor AI 竞品分析</h3><div class="meta">点击查看完整可视化竞品报告 →</div></a>
+      <a class="card" href="./claude_code_分析他的竞品_20260825072421.html"><h3>Claude Code 竞品分析报告</h3><div class="meta">点击查看完整可视化竞品报告 →</div></a>
+      <a class="card" href="./midjourney_20260825081211.html"><h3>Midjourney 产品深度分析报告</h3><div class="meta">点击查看完整可视化竞品报告 →</div></a>
+      <a class="card" href="./sample_report.html"><h3>可灵 AI 竞品分析（样例）</h3><div class="meta">点击查看完整可视化竞品报告 →</div></a>
+      <a class="card" href="./分析_Cursor_20260824203354.html"><h3>Cursor 产品分析报告</h3><div class="meta">点击查看完整可视化竞品报告 →</div></a>
+      <a class="card" href="./分析_vs_code_20260827171700.html"><h3>VS Code 竞品分析报告：代码编辑器市场的统治与挑战</h3><div class="meta">点击查看完整可视化竞品报告 →</div></a>
+      <a class="card" href="./分析一下_Cursor_这款_AI_编程工具_20260826005227.html"><h3>Cursor 产品分析报告</h3><div class="meta">点击查看完整可视化竞品报告 →</div></a>
+      <a class="card" href="./分析一下_Notion_AI_这款产品_20260826005415.html"><h3>Notion AI 产品分析报告</h3><div class="meta">点击查看完整可视化竞品报告 →</div></a>
+      <a class="card" href="./可灵_竞品分析.html"><h3>可灵 AI 竞品分析</h3><div class="meta">点击查看完整可视化竞品报告 →</div></a>
+      <a class="card" href="./对比_codex_与_cursor_20260824231230.html"><h3>Codex vs Cursor：AI 编程助手竞品对比研究报告</h3><div class="meta">点击查看完整可视化竞品报告 →</div></a>
+      <a class="card" href="./对比codex_20260824230846.html"><h3>Codex 竞品对比研究报告</h3><div class="meta">点击查看完整可视化竞品报告 →</div></a>
+      <a class="card" href="./对比即梦和小云雀_20260824233928.html"><h3>即梦 vs 小云雀：字节系AI创作平台竞品对比研究报告</h3><div class="meta">点击查看完整可视化竞品报告 →</div></a>
   </div>
-  <footer>由 AIPM·瞭望台 / AI情报局 自动生成 · 离线自包含 HTML</footer>
-</div>
+</section>
+
+<footer>由 AIPM·瞭望台 / AI情报局 自动生成 · 离线自包含 HTML · 演示作品集</footer>
+
+<script>
+  // 静态演示版：搜索框仅作界面还原，提交后引导至作品集
+  document.getElementById('goal-form').addEventListener('submit', function(e){
+    e.preventDefault();
+    var v = document.getElementById('goal-input').value.trim();
+    var s = document.getElementById('status');
+    if(!v){ s.textContent = '请输入研究目标，例如「分析一下 Cursor」'; return; }
+    s.textContent = '这是静态演示页，已生成的报告见下方作品集 ↓';
+    document.getElementById('portfolio').scrollIntoView({behavior:'smooth'});
+  });
+</script>
 </body>
 </html>

@@ -1,0 +1,325 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>AIPM·瞭望台 · 项目面试备战手册</title>
+<style>
+  :root{
+    --bg:#FFF9F0;--card:#FFFFFF;--ink:#2E2E38;--muted:#8A7D6B;
+    --line:#F3E6D0;--brand:#F59E0B;--brand-light:#FCD34D;--brand-ghost:#FFF3D9;--brand-deep:#C9742B;
+  }
+  *{box-sizing:border-box;margin:0;padding:0}
+  html{scroll-behavior:smooth}
+  body{font-family:-apple-system,BlinkMacSystemFont,"Segoe UI","PingFang SC","Microsoft YaHei",sans-serif;background:var(--bg);color:var(--ink);line-height:1.75;max-width:920px;margin:0 auto;padding:0 22px 80px}
+  header.top{text-align:center;padding:46px 0 26px;border-bottom:1px solid var(--line);margin-bottom:30px}
+  .badge{display:inline-block;background:var(--brand);color:#fff;font-size:13px;font-weight:600;padding:5px 14px;border-radius:999px;letter-spacing:1px}
+  header.top h1{font-size:30px;margin:16px 0 8px;letter-spacing:.5px}
+  header.top p{color:var(--muted);font-size:14px}
+  nav.toc{background:var(--card);border:1px solid var(--line);border-radius:14px;padding:18px 22px;margin-bottom:34px;font-size:14px}
+  nav.toc b{display:block;color:var(--brand-deep);margin-bottom:8px;font-size:13px;letter-spacing:1px}
+  nav.toc a{color:var(--ink);text-decoration:none;margin:0 14px 6px 0;display:inline-block}
+  nav.toc a:hover{color:var(--brand-deep);text-decoration:underline}
+  section{margin-bottom:40px}
+  h2{font-size:22px;border-left:5px solid var(--brand);padding-left:12px;margin:0 0 16px}
+  h3{font-size:16px;color:var(--brand-deep);margin:20px 0 8px}
+  p{margin:0 0 12px}
+  .lead{color:var(--muted);font-size:15px}
+  .card{background:var(--card);border:1px solid var(--line);border-radius:14px;padding:20px 22px;margin-bottom:16px}
+  .oneliner{background:var(--brand-ghost);border:1px solid var(--line);border-radius:14px;padding:20px 22px;font-size:16px;line-height:1.8}
+  .oneliner b{color:var(--brand-deep)}
+  table{width:100%;border-collapse:collapse;background:var(--card);border:1px solid var(--line);border-radius:12px;overflow:hidden;margin:8px 0 16px;font-size:14px}
+  th,td{border-bottom:1px solid var(--line);padding:10px 13px;text-align:left;vertical-align:top}
+  th{background:var(--brand-ghost);color:var(--brand-deep);font-weight:700}
+  tr:last-child td{border-bottom:none}
+  ul{margin:0 0 12px 22px}
+  li{margin:4px 0}
+  .tag{display:inline-block;background:var(--brand);color:#fff;font-size:12px;font-weight:600;border-radius:8px;padding:2px 9px;margin-right:6px}
+  .qa{border:1px solid var(--line);border-radius:14px;background:var(--card);padding:16px 20px;margin-bottom:14px}
+  .qa .q{font-weight:700;color:var(--ink);margin-bottom:6px}
+  .qa .q::before{content:"Q ";color:var(--brand);font-weight:800}
+  .qa .a{color:#3a3a44;font-size:14.5px}
+  .qa .a::before{content:"A ";color:var(--brand-deep);font-weight:800;margin-right:2px}
+  .warn{background:#FFF4E5;border:1px solid #F6D9A8;border-radius:12px;padding:16px 20px;font-size:14px;color:#7a5a1e}
+  .warn b{color:#9a6a12}
+  .script{background:var(--card);border:1px solid var(--line);border-radius:14px;padding:22px;font-size:15px;line-height:1.9}
+  .script .t{color:var(--brand-deep);font-weight:700;font-size:13px;letter-spacing:1px;display:block;margin:14px 0 4px}
+  footer{text-align:center;color:var(--muted);font-size:13px;margin-top:50px;padding-top:24px;border-top:1px solid var(--line)}
+  a.back{color:var(--brand-deep);text-decoration:none;font-size:14px}
+  .grid2{display:grid;grid-template-columns:1fr 1fr;gap:14px}
+  @media(max-width:640px){.grid2{grid-template-columns:1fr}body{padding:0 16px 60px}}
+</style>
+</head>
+<body>
+<header class="top">
+  <span class="badge">AIPM · 瞭望台</span>
+  <h1>项目面试备战手册</h1>
+  <p>面向 AI 产品经理岗位的「竞品分析产品」项目介绍 · 自我介绍 · 高频追问</p>
+</header>
+
+<nav class="toc">
+  <b>目录</b>
+  <a href="#p1">① 一句话定位</a>
+  <a href="#p2">② 2 分钟产品介绍</a>
+  <a href="#p3">③ 背景与痛点</a>
+  <a href="#p4">④ 设计理念</a>
+  <a href="#p5">⑤ 双模式与入口</a>
+  <a href="#p6">⑥ 10 维度框架</a>
+  <a href="#p7">⑦ 技术架构</a>
+  <a href="#p8">⑧ 我的角色与决策</a>
+  <a href="#p9">⑨ 难点与亮点</a>
+  <a href="#p10">⑩ 表达边界</a>
+  <a href="#p11">⑪ 高频追问 Q&A</a>
+</nav>
+
+<!-- ① -->
+<section id="p1">
+  <h2>① 一句话定位</h2>
+  <div class="oneliner">
+    <b>AIPM·瞭望台</b> 是一个面向 AI 产品决策者的<b>智能研究与报告生成系统</b>：你输入一个研究目标（产品分析 / 竞品对比 / 市场扫描 / 产品选型 / 机会探索），它实时联网检索，产出<b>结构化、带证据来源、可视化</b>的研究报告——把原本要花数小时的跨源调研，压缩成「一次提交 + 一份报告」。
+  </div>
+  <p class="lead" style="margin-top:12px">领域限定：只做 AI 相关（大模型 / 对话 / 绘画视频 / 办公效率 / 营销 / 编程 / 搜索 / 公司·基建）。本质是「skill + 固定顺序流水线」，不是会自由发挥的 Agent。</p>
+</section>
+
+<!-- ② -->
+<section id="p2">
+  <h2>② 2 分钟产品介绍（逐字稿结构）</h2>
+  <div class="script">
+    <span class="t">开场（15 秒）</span>
+    面试官好，我想讲一个我自己从 0 到 1 搭的 AI 产品项目——AIPM·瞭望台。它解决的是 AI 产品经理自己最痛的一件事：做竞品或选型调研时，信息散、来源杂、还容易凭印象下结论。
+
+    <span class="t">痛点（25 秒）</span>
+    AI 行业迭代极快，一个产品的定价、能力、口碑分散在官网、定价页、博客、GitHub、Reddit、新闻里。人工去搜、交叉验证，一份报告动辄几小时，而且结论常常没有出处、容易幻觉。
+
+    <span class="t">产品是什么（40 秒）</span>
+    我做了一个输入「研究目标」就能出报告的系统。用户可以用自然语言说「分析一下 Cursor」，也可以直接点名「对比 Cursor 和 Dify」。系统会先解析意图——对象是谁、要比什么、限哪些维度；然后实时联网检索；最后按固定框架写出一份带「结论-来源」绑定的报告，并用 ECharts 渲染成能力雷达图、市场地图、时间线这些可视化图表。它有两类模式：对比模式只比用户点名的几个；竞品分析模式会给单主体自动补 5 个竞品再对比。
+
+    <span class="t">我的角色与做法（25 秒）</span>
+    我既是产品设计也是实现者。我定了三条核心纪律：零确认直跑、证据可追溯、约定写法驱动可视化。尤其是「证据可追溯」——每条结论必须绑来源、分事实/洞察/建议，来源缺失就标「未查证」，绝不编造数据。这也是我作为 PM 对「可信 AI 产品」的理解。
+
+    <span class="t">边界与价值（15 秒）</span>
+    它没有做数据库、RAG、多智能体——MVP 我刻意聚焦单条可验证闭环。它的价值是把「数小时调研」变成「一次提交」，结论还能溯源，能直接用于评审、立项和竞品跟踪。
+  </div>
+</section>
+
+<!-- ③ -->
+<section id="p3">
+  <h2>③ 背景与痛点</h2>
+  <div class="card">
+    <ul>
+      <li><b>信息分散耗时</b>：官网 / 博客 / 社区 / 新闻 / 代码仓库散落各处，人工搜集成本高。</li>
+      <li><b>来源不可信</b>：网络信息良莠不齐，结论常无出处，难以交叉验证。</li>
+      <li><b>缺乏统一框架</b>：不同人调研口径不一，结果不可比、难沉淀。</li>
+      <li><b>产出非结构化</b>：笔记/截图零散，无法直接用于汇报、评审、立项。</li>
+    </ul>
+  </div>
+  <p class="lead">一句话：AI 行业快、散、虚，PM 做决策最缺的是「可信、可比、可复盘」的结构化情报。</p>
+</section>
+
+<!-- ④ -->
+<section id="p4">
+  <h2>④ 设计理念（三大核心纪律）</h2>
+  <div class="grid2">
+    <div class="card">
+      <h3><span class="tag">纪律一</span>零确认直跑</h3>
+      <p>解析完默认直接检索出报告，不弹确认卡打断。唯一例外：仅当「单对象且措辞无法判定是产品分析还是竞品分析」时，弹一个 A/B 轻询问。其余字段用合理默认值，报告顶部用一行「本次假设」明示口径，确认动作后置到看报告之后（可增量重跑，如「加 Trae」「只盯定价」）。</p>
+    </div>
+    <div class="card">
+      <h3><span class="tag">纪律二</span>证据可追溯</h3>
+      <p>每条重要结论绑定：结论、来源、时间、来源类型、可信度。结论分三类——<b>事实</b>（可核实客观信息）、<b>洞察</b>（基于事实的分析判断）、<b>建议</b>（面向决策的行动）。来源缺失标「未查证」，严禁编造。</p>
+    </div>
+    <div class="card">
+      <h3><span class="tag">纪律三</span>约定写法 → 可视化</h3>
+      <p>报告用固定约定写法（特定表格/标题结构）撰写，由渲染脚本生成图表页。写作者只遵守写法，不关心图表实现；要改视觉效果只动渲染器，不改内容。</p>
+    </div>
+    <div class="card">
+      <h3><span class="tag">取舍</span>不为「显得高级」加复杂度</h3>
+      <p>MVP 明确不做数据库 / RAG / LangGraph / 量化评测。复用成熟的自包含 ECharts 渲染器，网站化时只丢胶水代码。诚实优先：原型就是原型，不把「待验证」写成「已实现」。</p>
+    </div>
+  </div>
+</section>
+
+<!-- ⑤ -->
+<section id="p5">
+  <h2>⑤ 双模式与入口（5 类研究目标）</h2>
+  <table>
+    <tr><th>研究目标</th><th>说明</th><th>示例输入</th></tr>
+    <tr><td>产品分析</td><td>系统分析单个产品</td><td>分析一下可灵</td></tr>
+    <tr><td>竞品对比</td><td>比较若干点名对象</td><td>对比 Cursor 与 Dify</td></tr>
+    <tr><td>市场扫描</td><td>盘点一条赛道</td><td>AI 编程助手赛道有哪些玩家</td></tr>
+    <tr><td>产品选型</td><td>按需求选工具</td><td>小团队做 AI 客服选哪个</td></tr>
+    <tr><td>机会探索</td><td>找空白与可切入方向</td><td>AI 办公还有哪些空白</td></tr>
+  </table>
+  <div class="card">
+    <h3>双模式</h3>
+    <ul>
+      <li><b>对比模式</b>：用户点名 N 个 → 仅就这 N 个正面对比，不引入外部竞品（如「Kimi 和豆包长文本谁强」，只比这俩，长文本维度高亮）。</li>
+      <li><b>竞品分析模式</b>：用户只给 1 个主体 → 先深析该主体，再对比默认 5 个竞品（候选初稿来自预置清单，确认后实时检索扩充），并含「机会点」模块。</li>
+    </ul>
+    <p class="lead" style="margin:8px 0 0">输入支持自然语言（「分析一下可灵」）与结构化（直接填 1–3 个对象名）。</p>
+  </div>
+</section>
+
+<!-- ⑥ -->
+<section id="p6">
+  <h2>⑥ 10 维度分析框架</h2>
+  <p class="lead">排序固定：用户体验位于商业模式与增长之间；风险与短板永远置末。维度无重叠，各看一个切面。</p>
+  <table>
+    <tr><th>#</th><th>维度</th><th>看什么</th></tr>
+    <tr><td>1</td><td>市场与定位</td><td>目标用户、使用场景、品牌调性、赛道规模与位置</td></tr>
+    <tr><td>2</td><td>产品与核心功能</td><td>功能清单、核心场景覆盖、差异化功能点</td></tr>
+    <tr><td>3</td><td>AI 能力</td><td>底层模型、基准表现、生成质量、上下文长度、一致性、速度</td></tr>
+    <tr><td>4</td><td>数据壁垒</td><td>数据资产、数据飞轮、护城河、隐私与合规</td></tr>
+    <tr><td>5</td><td>技术与生态</td><td>技术架构、API 开放、第三方集成、开源与开发者生态</td></tr>
+    <tr><td>6</td><td>商业模式与定价</td><td>免费/订阅/按量/企业版、价格带、变现边界</td></tr>
+    <tr><td>7</td><td>用户体验</td><td>易用性、界面、延迟、稳定性、客服</td></tr>
+    <tr><td>8</td><td>增长与运营</td><td>获客渠道、内容打法、社区、口碑、病毒机制</td></tr>
+    <tr><td>9</td><td>机会点</td><td>竞品未覆盖的空白、真实需求、可切入方向（按意图可选）</td></tr>
+    <tr><td>10</td><td>风险与短板</td><td>合规风险、技术依赖、模式缺陷、竞争短板（置末）</td></tr>
+  </table>
+  <p class="lead">评分口径：1–5 分制（5=领先，3=行业平均，1=基本不覆盖），在图表图例中轻量说明，不作免责声明。</p>
+</section>
+
+<!-- ⑦ -->
+<section id="p7">
+  <h2>⑦ 技术架构与流程</h2>
+  <div class="card">
+    <h3>5 步流水线</h3>
+    <ol>
+      <li><b>意图解析</b>：自然语言/结构化输入 → 对象（1–3）、目标类型、限定维度、模式。</li>
+      <li><b>研究简报</b>：零确认直跑下，此步实为「看报告后确认」，报告顶部一行「本次假设」明示口径。</li>
+      <li><b>实时检索</b>：按维度并行检索，每条结论带来源（官网/帮助文档/定价页/博客/发布说明/GitHub/Reddit/Product Hunt/Hacker News/新闻/财报）。不做持久化知识库、不做 RAG。</li>
+      <li><b>撰写报告</b>：按 11 章节 + 约定写法写 Markdown，结论分事实/洞察/建议。</li>
+      <li><b>渲染</b>：<code>build_report.py</code> 生成自包含 ECharts 可视化 HTML。</li>
+    </ol>
+  </div>
+  <div class="card">
+    <h3>技术选型</h3>
+    <ul>
+      <li>后端：<b>Python + FastAPI</b>，复用渲染器。</li>
+      <li>外部依赖：<b>DeepSeek</b>（分析/撰写）+ <b>Tavily</b>（实时检索）。</li>
+      <li>渲染：<b>自包含 ECharts HTML</b>，零外链，可直接打开/分享。</li>
+      <li>预置竞品：<code>preset-competitors.md</code> 是<b>静态种子表</b>（非 RAG、非向量库），仅作竞品分析模式快速建议。</li>
+    </ul>
+  </div>
+  <h3>报告可视化类型</h3>
+  <table>
+    <tr><th>图表</th><th>约定写法</th><th>说明</th></tr>
+    <tr><td>能力雷达图</td><td>1–5 分矩阵表（首列维度、后列对象）</td><td>多维能力叠加对比</td></tr>
+    <tr><td>市场地图</td><td>名称|X|Y|规模 表</td><td>定位散点</td></tr>
+    <tr><td>时间线</td><td>## 时间线 下 - 日期：事件</td><td>版本/融资脉络</td></tr>
+    <tr><td>用户口碑</td><td>## 用户口碑 下正负向引用</td><td>口碑情感</td></tr>
+    <tr><td>优先级看板</td><td>Must/Should/Could 列表</td><td>建议分级</td></tr>
+  </table>
+</section>
+
+<!-- ⑧ -->
+<section id="p8">
+  <h2>⑧ 我的角色与关键决策（AIPM 视角）</h2>
+  <div class="grid2">
+    <div class="card">
+      <h3>我做了什么</h3>
+      <ul>
+        <li>从 0 定义产品定位与目标用户（AI PM 0–5 年为主）。</li>
+        <li>设计 10 维度分析框架与 5 类研究目标入口。</li>
+        <li>定三条核心纪律，尤其是「证据可追溯」约束 AI 不幻觉。</li>
+        <li>设计双模式，平衡「用户想比谁就比谁」与「自动补竞品」。</li>
+        <li>定可视化约定写法 + 奶黄橘黄视觉规范，落地渲染器。</li>
+      </ul>
+    </div>
+    <div class="card">
+      <h3>关键取舍决策</h3>
+      <ul>
+        <li><b>不做 RAG/数据库</b>：MVP 聚焦单条可验证闭环，先证明价值。</li>
+        <li><b>零确认直跑</b>：用「看报告后确认 + 增量重跑」换体验流畅。</li>
+        <li><b>结论三分类</b>：事实/洞察/建议分离，让 PM 知道哪些是推断。</li>
+        <li><b>渲染与内容解耦</b>：约定写法让非工程师也能产出一致报告。</li>
+      </ul>
+    </div>
+  </div>
+</section>
+
+<!-- ⑨ -->
+<section id="p9">
+  <h2>⑨ 难点与亮点</h2>
+  <div class="grid2">
+    <div class="card">
+      <h3>难点</h3>
+      <ul>
+        <li>实时检索质量依赖模型与搜索能力 → 多源并行 + 交叉验证 + 来源优先级。</li>
+        <li>信息时效性 → 报告标注数据时间，关键结论标来源时间。</li>
+        <li>幻觉风险 → 证据纪律（结论-来源绑定、未查证标注）。</li>
+      </ul>
+    </div>
+    <div class="card">
+      <h3>亮点</h3>
+      <ul>
+        <li><b>证据可追溯</b>：每条结论可溯源，从机制上抑制幻觉。</li>
+        <li><b>结构化可视化</b>：雷达/地图/时间线直接可用于评审。</li>
+        <li><b>零外链自包含</b>：报告是单文件 HTML，离线可看、易分享。</li>
+        <li><b>诚实边界</b>：原型即原型，对外表达不夸大。</li>
+      </ul>
+    </div>
+  </div>
+</section>
+
+<!-- ⑩ -->
+<section id="p10">
+  <h2>⑩ 对外表达边界（诚实原则）</h2>
+  <div class="warn">
+    <b>面试与简历都适用——超出证据边界的话一句都不要说：</b>
+    <ul style="margin:8px 0 0 20px">
+      <li><b>状态</b>：写「原型 / 离线验证」，<b>不写"上线系统"</b>（网站在搭、未部署）。</li>
+      <li><b>用户</b>：写「面向…设计 / 用公开样本验证」，<b>不写"服务了 N 位用户"</b>（无真实用户记录）。</li>
+      <li><b>指标</b>：不写提升百分比；量化评测体系未建，相关能力标「待验证」。</li>
+      <li><b>技术词</b>：每个词（Workflow / 检索 / 渲染器）都要能答"解决哪个节点、为何不用更简单方法、怎么失败"——答不出就删。</li>
+    </ul>
+  </div>
+</section>
+
+<!-- ⑪ -->
+<section id="p11">
+  <h2>⑪ 面试高频追问 Q&A</h2>
+
+  <div class="qa">
+    <div class="q">为什么不做 RAG / 数据库，不怕信息过时吗？</div>
+    <div class="a">MVP 目标是先验证「单次研究闭环」这个核心价值，而不是堆技术复杂度。每次研究都实时联网检索，本身就不依赖历史库，所以 RAG 在 v1 是冗余。时效性问题我用「报告标注数据时间 + 关键结论标来源时间」解决，而不是预先灌库。等闭环跑顺了，v1.1 再评估是否需要持久化知识库。</div>
+  </div>
+
+  <div class="qa">
+    <div class="q">"证据可追溯"具体怎么落地，怎么防止模型编造？</div>
+    <div class="a">三条硬规则：①每条重要结论后必须附来源角标，报告末汇总来源卡片（官网/定价页/GitHub/Reddit 等）；②结论分事实/洞察/建议三类，让面试官和读者一眼区分"客观信息"和"我的推断"；③来源缺失或存疑时标「未查证」，宁可降级也绝不编功能、价格、份额、融资数字。这是产品纪律，也是我对"可信 AI"的理解。</div>
+  </div>
+
+  <div class="qa">
+    <div class="q">用户只输入一个产品，你怎么决定对比哪 5 个竞品？</div>
+    <div class="a">用一份静态种子表 preset-competitors（按品类取同类其余产品，默认上限 5，不足跨相邻品类补），但它只是"快速建议"，不是封闭列表。真实检索是开放联网的，远多于此表；如果主体不在种子表，就实时检索或轻问用户，不会硬塞不相关的厂商进去。</div>
+  </div>
+
+  <div class="qa">
+    <div class="q">为什么是"零确认直跑"，不怕跑偏吗？</div>
+    <div class="a">调研类任务的默认意图其实很清晰，反复确认反而打断心流。我用两道防线兜底：报告顶部一行「本次假设」明示本次运行口径（对象/维度/深度）；确认动作后置到看报告之后，支持增量重跑（如"加 Trae""只盯定价"）。唯一会轻问的情况是单对象且措辞真判定不了产品分析还是竞品分析。</div>
+  </div>
+
+  <div class="qa">
+    <div class="q">这个产品和通用 AI 助手（如直接问 ChatGPT）区别在哪？</div>
+    <div class="a">三个差异：①统一分析框架——不是零散答案，而是固定 10 维度 + 11 章节的结构化报告；②决策导向——结论分事实/洞察/建议，带证据，可直接用于评审立项；③可视化可复用——雷达图、市场地图能沉淀对比，而不是聊完即忘。本质是"有纪律的研究流水线"，不是"又一次性问答"。</div>
+  </div>
+
+  <div class="qa">
+    <div class="q">你作为 PM，这个项目里最得意的一个决策是什么？</div>
+    <div class="a">是"约定写法驱动可视化"：我让报告用固定 Markdown 表格/标题结构撰写，渲染器自动出图。这样非工程师也能产出视觉一致的报告，改版式只动渲染器不碰内容。它把"产品定义"和"工程实现"解耦，是性价比最高的一个设计决策。</div>
+  </div>
+
+  <div class="qa">
+    <div class="q">下一步规划是什么？</div>
+    <div class="a">把本地渲染器升级为正式产品站：前端输入研究目标 → 后端接 LLM+搜索 API 实时出报告，托管用 CloudStudio 全栈一体（代码仓仍在 GitHub）。但对外我只说"在做网站化"，不会说"已上线"——这是表达边界。</div>
+  </div>
+</section>
+
+<footer>
+  <a class="back" href="./index.html">← 返回作品集首页</a><br>
+  本手册由 AIPM·瞭望台 项目文档（项目总纲 / PRD / SKILL）整理汇总 · 供面试备战使用
+</footer>
+</body>
+</html>
