@@ -18,7 +18,7 @@
   .badge{display:inline-block;background:var(--brand);color:#fff;font-size:13px;font-weight:600;padding:5px 14px;border-radius:999px;letter-spacing:1px}
   .hero h1{font-size:38px;margin:18px 0 10px;letter-spacing:.5px}
   .hero .sub{font-size:16px;color:var(--brand-deep);font-weight:600;margin-bottom:14px}
-  .hero p.lead{font-size:15.5px;color:var(--muted);max-width:640px;margin:0 auto 26px}
+  .hero p.lead{font-size:15.5px;color:var(--muted);max-width:660px;margin:0 auto 26px}
   .cta{display:flex;gap:14px;justify-content:center;flex-wrap:wrap}
   .btn{padding:13px 26px;border-radius:14px;font-size:14.5px;font-weight:700;text-decoration:none;transition:.15s;display:inline-block}
   .btn.primary{background:var(--brand);color:#fff}
@@ -28,7 +28,7 @@
   section{padding:52px 0}
   section h2{font-size:24px;text-align:center;border-left:5px solid var(--brand);padding-left:12px;margin:0 auto 10px;display:inline-block}
   .sec-head{text-align:center;margin-bottom:34px}
-  .sec-head .hint{color:var(--muted);font-size:14px;margin-top:8px}
+  .sec-head .hint{color:var(--muted);font-size:14px;margin-top:8px;max-width:680px;margin-left:auto;margin-right:auto}
   /* pain */
   .grid3{display:grid;grid-template-columns:repeat(3,1fr);gap:16px}
   .tile{background:var(--card);border:1px solid var(--line);border-radius:16px;padding:22px 20px}
@@ -59,12 +59,52 @@
   .flow .step b{display:block;font-size:14px}
   .flow .step span{font-size:12.5px;color:var(--muted)}
   .flow .arrow{display:flex;align-items:center;color:var(--brand);font-size:20px;padding:0 6px}
+  /* ===== AIPM build-logic ===== */
+  .build{background:#FFFDF7}
+  .build-intro{max-width:720px;margin:0 auto 30px;text-align:center;color:var(--muted);font-size:15px}
+  .disc{display:grid;grid-template-columns:repeat(3,1fr);gap:16px;margin-bottom:30px}
+  .disc .card{background:var(--card);border:1px solid var(--line);border-radius:16px;padding:22px 20px;border-top:4px solid var(--brand)}
+  .disc .card h3{font-size:16.5px;color:var(--brand-deep);margin-bottom:8px}
+  .disc .card p{font-size:14px;color:var(--muted);margin:0}
+  .phil{background:var(--brand-ghost);border:1px dashed var(--brand);border-radius:16px;padding:22px 24px;margin-bottom:30px}
+  .phil h4{font-size:15px;color:var(--brand-deep);margin-bottom:10px}
+  .phil ul{margin:0;padding-left:20px;color:#5a4a2e;font-size:14px}
+  .phil li{margin-bottom:6px}
+  .phil b{color:var(--ink)}
+  /* dims grid */
+  .dims{display:grid;grid-template-columns:repeat(5,1fr);gap:12px;margin-bottom:30px}
+  .dims .d{background:var(--card);border:1px solid var(--line);border-radius:12px;padding:14px 12px;text-align:center}
+  .dims .d .no{display:inline-block;background:var(--brand);color:#fff;font-size:12px;font-weight:800;border-radius:8px;width:24px;height:24px;line-height:24px;margin-bottom:8px}
+  .dims .d span{font-size:13.5px;display:block;color:var(--ink)}
+  /* two-mode */
+  .modes{display:grid;grid-template-columns:1fr 1fr;gap:16px;margin-bottom:30px}
+  .modes .m{background:var(--card);border:1px solid var(--line);border-radius:16px;padding:20px}
+  .modes .m h4{font-size:15.5px;color:var(--brand-deep);margin-bottom:8px}
+  .modes .m p{font-size:14px;color:var(--muted);margin:0}
+  /* phased timeline */
+  .phases{display:grid;grid-template-columns:repeat(4,1fr);gap:14px;margin-bottom:30px}
+  .phases .p{background:var(--card);border:1px solid var(--line);border-radius:14px;padding:18px 16px}
+  .phases .p .tag{display:inline-block;background:var(--brand-ghost);color:var(--brand-deep);font-size:12px;font-weight:700;padding:3px 10px;border-radius:999px;margin-bottom:10px}
+  .phases .p h4{font-size:14.5px;margin-bottom:6px}
+  .phases .p p{font-size:13px;color:var(--muted);margin:0}
+  /* compare table */
+  .ctable{width:100%;border-collapse:collapse;background:var(--card);border:1px solid var(--line);border-radius:14px;overflow:hidden;margin-bottom:30px}
+  .ctable th,.ctable td{border-bottom:1px solid var(--line);padding:12px 14px;font-size:13.5px;text-align:left;vertical-align:top}
+  .ctable th{background:var(--brand-ghost);color:var(--brand-deep);font-weight:700}
+  .ctable td.mod{color:var(--muted)}
+  .ctable td.mvp{color:var(--ink);font-weight:600}
+  .ctable tr:last-child td{border-bottom:none}
+  .honest{background:var(--card);border:1px solid var(--line);border-left:5px solid var(--brand-deep);border-radius:12px;padding:20px 22px}
+  .honest h4{font-size:15px;color:var(--brand-deep);margin-bottom:10px}
+  .honest ul{margin:0;padding-left:20px;font-size:14px;color:#5a4a2e}
+  .honest li{margin-bottom:6px}
   /* value */
   .value{background:var(--brand-ghost);border:1px solid var(--line);border-radius:18px;padding:30px;text-align:center}
-  .value p{font-size:16px;max-width:680px;margin:0 auto;color:#5a4a2e}
+  .value p{font-size:16px;max-width:700px;margin:0 auto;color:#5a4a2e}
   footer{text-align:center;color:var(--muted);font-size:13px;padding:36px 22px;border-top:1px solid var(--line)}
   footer a{color:var(--brand-deep);text-decoration:none;margin:0 8px}
-  @media(max-width:760px){.grid3,.feat{grid-template-columns:1fr}.preview{grid-template-columns:1fr}.hero h1{font-size:30px}.flow .arrow{transform:rotate(90deg)}}
+  @media(max-width:860px){.dims{grid-template-columns:repeat(2,1fr)}.phases{grid-template-columns:repeat(2,1fr)}}
+  @media(max-width:760px){.grid3,.feat,.disc,.modes{grid-template-columns:1fr}.preview{grid-template-columns:1fr}.hero h1{font-size:30px}.flow .arrow{transform:rotate(90deg)}.ctable{display:block;overflow-x:auto;white-space:nowrap}}
 </style>
 </head>
 <body>
@@ -73,11 +113,11 @@
   <div class="wrap">
     <span class="badge">AIPM · 瞭望台</span>
     <h1>把数小时调研，压缩成一份带证据的报告</h1>
-    <div class="sub">面向 AI 产品决策者的智能竞品研究与报告生成系统</div>
-    <p class="lead">输入一个研究目标，系统实时联网检索，自动产出结构化、可视化、可溯源的竞品分析报告——让 PM 做决策时，不再靠印象，靠证据。</p>
+    <div class="sub">一个由 AI 产品经理主导设计的智能竞品研究与报告生成系统</div>
+    <p class="lead">输入一个研究目标，系统实时联网检索，自动产出结构化、可视化、可溯源的竞品分析报告——让 PM 做决策时，不再靠印象，靠证据。这是一个从问题定义到 MVP 落地，全程由产品方法论驱动的项目。</p>
     <div class="cta">
       <a class="btn primary" href="./index.html">查看报告作品集 →</a>
-      <a class="btn ghost" href="./interview.html">面试备战手册</a>
+      <a class="btn ghost" href="#build">看搭建逻辑 ↓</a>
     </div>
   </div>
 </div>
@@ -126,10 +166,8 @@
     <div class="preview">
       <div class="mock">
         <svg width="280" height="280" viewBox="0 0 400 400" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="能力雷达图示意">
-          <!-- grid -->
           <polygon points="200,50 329.9,125 329.9,275 200,350 70.1,275 70.1,125" fill="none" stroke="#F3E6D0" stroke-width="1.5"/>
           <polygon points="200,125 264.95,162.5 264.95,237.5 200,275 135.05,237.5 135.05,162.5" fill="none" stroke="#F3E6D0" stroke-width="1.5"/>
-          <!-- axes -->
           <g stroke="#E6D6BC" stroke-width="1">
             <line x1="200" y1="200" x2="200" y2="50"/>
             <line x1="200" y1="200" x2="329.9" y2="125"/>
@@ -138,11 +176,8 @@
             <line x1="200" y1="200" x2="70.1" y2="275"/>
             <line x1="200" y1="200" x2="70.1" y2="125"/>
           </g>
-          <!-- product B -->
           <polygon points="200,102.5 290.9,147.5 277.9,245 200,320 122.1,245 89.6,136.25" fill="rgba(140,125,107,.18)" stroke="#8A7D6B" stroke-width="2"/>
-          <!-- product A -->
           <polygon points="200,80 316.9,132.5 310.4,263.75 200,290 102.6,256.25 109.1,147.5" fill="rgba(245,158,11,.22)" stroke="#F59E0B" stroke-width="2.5"/>
-          <!-- labels -->
           <g font-size="13" fill="#5a4a2e" font-family="PingFang SC,sans-serif">
             <text x="200" y="38" text-anchor="middle">市场定位</text>
             <text x="344" y="118" text-anchor="start">核心功能</text>
@@ -188,18 +223,110 @@
   </div>
 </section>
 
+<!-- ===== 作为 AIPM 的搭建逻辑 ===== -->
+<section id="build" class="build">
+  <div class="wrap">
+    <div class="sec-head">
+      <h2>作为 AIPM 的搭建逻辑</h2>
+      <div class="hint">这不只是"又一个 AI 问答"，而是一套由产品方法论驱动的研究流水线。下面是从问题定义到 MVP 落地的完整思考。</div>
+    </div>
+
+    <div class="build-intro">做这个项目时，我把自己放在 AI 产品经理的位置：先定清楚"为谁、解决什么、为什么不做某些看起来很高级的事"，再谈工程。下面四块是它的设计骨架。</div>
+
+    <!-- 三大纪律 -->
+    <div class="disc">
+      <div class="card">
+        <h3>纪律一 · 零确认直跑</h3>
+        <p>解析完默认直接出报告，不弹确认卡打断心流。唯一例外：单对象且无法判定"产品分析 / 竞品分析"时才轻问一下。其余字段（对象数 / 维度 / 深度）一律给合理默认值，报告顶部以"本次假设"明示口径，确认动作后置到看报告后，可增量重跑（如"加 Trae""只盯定价"）。</p>
+      </div>
+      <div class="card">
+        <h3>纪律二 · 证据可追溯</h3>
+        <p>每条重要结论都绑定结论 / 来源 / 时间 / 类型 / 可信度，并分三类：事实（可核实）、洞察（分析判断）、建议（行动）。来源缺失就标"未查证"，严禁编造功能、价格、份额、融资——从机制上抑制幻觉。</p>
+      </div>
+      <div class="card">
+        <h3>纪律三 · 约定写法渲染</h3>
+        <p>报告用固定写法撰写（特定表格 / 标题结构），由渲染脚本生成图表页面。写作者只管遵守写法，不必懂图表实现；之后要改视觉，只动渲染器、不动内容，职责彻底分离。</p>
+      </div>
+    </div>
+
+    <!-- 取舍哲学 -->
+    <div class="phil">
+      <h4>取舍哲学：为什么 MVP 主动"少做"</h4>
+      <ul>
+        <li><b>不做持久化数据库 / RAG / LangGraph / 量化评测</b>：MVP 聚焦"单条可验证闭环"，避免为显得高级而提前引入复杂度，把不确定性留在可控范围内。</li>
+        <li><b>复用优于重写</b>：自包含 ECharts HTML 渲染器在原型期已成熟，网站化时只补胶水代码，不复写视觉，省时间也降风险。</li>
+        <li><b>诚实优先</b>：原型就是原型，不把"待验证"写成"已实现"——对外表达严守边界，这是做 AI 项目的底线。</li>
+      </ul>
+    </div>
+
+    <!-- 10 维度 -->
+    <div class="sec-head" style="margin-bottom:18px"><h2 style="font-size:19px">分析框架：10 个互不重合的维度</h2></div>
+    <div class="dims">
+      <div class="d"><span class="no">1</span><span>市场与定位</span></div>
+      <div class="d"><span class="no">2</span><span>产品与功能</span></div>
+      <div class="d"><span class="no">3</span><span>AI 能力</span></div>
+      <div class="d"><span class="no">4</span><span>数据壁垒</span></div>
+      <div class="d"><span class="no">5</span><span>技术与生态</span></div>
+      <div class="d"><span class="no">6</span><span>商业模式与定价</span></div>
+      <div class="d"><span class="no">7</span><span>用户体验</span></div>
+      <div class="d"><span class="no">8</span><span>增长与运营</span></div>
+      <div class="d"><span class="no">9</span><span>机会点</span></div>
+      <div class="d"><span class="no">10</span><span>风险与短板</span></div>
+    </div>
+
+    <!-- 双模式 -->
+    <div class="modes">
+      <div class="m"><h4>对比模式</h4><p>用户点名 N 个对象 → 仅就这 N 个正面对比，不引入外部竞品。适合"我已经圈定对手，帮我看清差距"的场景。</p></div>
+      <div class="m"><h4>竞品分析模式</h4><p>用户只给 1 个主体 → 先深析该主体，再用预置清单建议并实时检索扩充出 5 个竞品对比，含机会点模块。适合"我盯一个产品，帮我找它周围是谁"的场景。</p></div>
+    </div>
+
+    <!-- 分阶段路径 -->
+    <div class="sec-head" style="margin-bottom:18px"><h2 style="font-size:19px">分阶段实施路径</h2></div>
+    <div class="phases">
+      <div class="p"><span class="tag">阶段 0</span><h4>设计定稿</h4><p>10 维度、5 类研究目标、证据纪律、11 章节、图表类型全部定稿，先有共识再写代码。</p></div>
+      <div class="p"><span class="tag">阶段 1</span><h4>原型跑通</h4><p>在对话环境内实跑 5 类样例，产出可运行技能 + 样例报告 + 渲染脚本，验证核心价值。</p></div>
+      <div class="p"><span class="tag">阶段 2</span><h4>网站产品化</h4><p>后端封装"解析→检索→分析→报告"，前端输入框提交→可视化报告页，复用渲染层，部署到公网。</p></div>
+      <div class="p"><span class="tag">阶段 3</span><h4>上线 + 增强</h4><p>正式发布；可选增强含社区深度接入、定时重跑、交互可视化升级、扩展到 AI 外领域。</p></div>
+    </div>
+
+    <!-- 技术选型对照 -->
+    <div class="sec-head" style="margin-bottom:18px"><h2 style="font-size:19px">技术选型：全栈原案 vs MVP 落地</h2></div>
+    <table class="ctable">
+      <thead><tr><th>模块</th><th>全栈原案</th><th>最小可行产品落地</th><th>取舍理由</th></tr></thead>
+      <tbody>
+        <tr><td>前端</td><td class="mod">Next.js</td><td class="mvp">自包含可视化 HTML 模板</td><td class="mod">第一版零依赖，快速验证视觉与写法</td></tr>
+        <tr><td>后端</td><td class="mod">FastAPI 服务化</td><td class="mvp">技能 / 轻量脚本承载</td><td class="mod">先验证逻辑，确认价值再补服务化</td></tr>
+        <tr><td>数据库</td><td class="mod">PostgreSQL + pgvector</td><td class="mvp">暂不做</td><td class="mod">实时检索即可，无持久化需求</td></tr>
+        <tr><td>检索增强</td><td class="mod">向量数据库 RAG</td><td class="mvp">实时检索</td><td class="mod">v1.1 起再评估是否引入</td></tr>
+        <tr><td>流程编排</td><td class="mod">LangGraph</td><td class="mvp">顺序工作流</td><td class="mod">固定流程无需复杂编排，省复杂度</td></tr>
+        <tr><td>评测</td><td class="mod">多指标体系</td><td class="mvp">后置</td><td class="mod">上线后按真实使用迭代</td></tr>
+      </tbody>
+    </table>
+
+    <!-- 诚实表达边界 -->
+    <div class="honest">
+      <h4>对外表达边界（做 AI 项目的诚实底线）</h4>
+      <ul>
+        <li>状态写「原型 / 离线验证」——<b>不写"上线系统"</b>（网站在搭、未部署）。</li>
+        <li>用户写「面向…设计 / 用公开样本验证」——<b>不写"服务了 N 位用户"</b>（无真实用户记录）。</li>
+        <li>不写提升百分比；量化评测未建，相关能力一律标「待验证」。</li>
+        <li>每个技术词（Workflow / 检索 / 渲染器）都要能答"解决哪个节点、为何不用更简单方法、怎么失败"——答不出就删。</li>
+      </ul>
+    </div>
+  </div>
+</section>
+
 <!-- 价值 -->
 <section>
   <div class="wrap">
     <div class="value">
-      <p>对 AI 产品经理来说，AIPM·瞭望台 把「几小时跨源调研」变成「一次提交 + 一份带证据的报告」——结论可溯源、框架可复用、图表可直接进评审。目前是已离线验证的原型，用公开样本跑通了完整研究闭环。</p>
+      <p>对 AI 产品经理来说，AIPM·瞭望台 把「几小时跨源调研」变成「一次提交 + 一份带证据的报告」——结论可溯源、框架可复用、图表可直接进评审。它更是一个产品方法论的样板：从问题定义、框架设计、MVP 取舍到分阶段交付，每一步都由「为什么做 / 为什么不做」驱动。目前是已离线验证的原型，用公开样本跑通了完整研究闭环。</p>
     </div>
   </div>
 </section>
 
 <footer>
   <a href="./index.html">报告作品集</a> ·
-  <a href="./interview.html">面试备战手册</a> ·
   <a href="./showcase.html">项目介绍</a><br>
   AIPM·瞭望台 / AI情报局 · 离线自包含 HTML · 演示作品集
 </footer>
